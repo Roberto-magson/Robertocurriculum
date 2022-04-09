@@ -1,0 +1,325 @@
+<?php
+$nombre = $_POST['nombre'];
+$apellido1 = $_POST['apellido1'];
+$apellido2 = $_POST['apellido2'];
+$nombreEmpresa = $_POST['nombreEmpresa'];
+$numero = $_POST['numero'];
+$correoElectronico = $_POST['correoElectronico'];
+$message = $_POST['message'];
+
+$header = 'From: ' . $mail . "\r\n";
+$header = "X-Mailer: PHP/" . phpversion() . "\r\n";
+$header = "Mime-Version: 1.0 \r\n";
+$header = "Content-Type: text/plain";
+
+$message = "Este mensaje fue enviado por : " . $nombre . "\r\n";
+$message = "Con apellidos: " . $apellido1 . $apellido2 . "\r\n";
+$message = "La empresa es: " . $nombreEmpresa . "\r\n";
+$message = "El numero del interesado es: " . $numero . "\r\n";
+$message = "El correo electronico es: " . $correoElectronico . "\r\n";
+
+$para = 'robertomagromas@gmail.com';
+$asunto = 'Asunto del mensaje';
+
+mail($para, $asunto, utf8_decode($message), $header);
+
+header("Location:index.html");
+?>
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<meta charset="UTF-8">
+		<title>Roberto Magro</title>
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	
+	<body>
+		<ul class="menu">
+			<li><a href= "primerapagina.html" >Presentaciòn</a></li>
+			<li><a href= "segundapagina.html" >Informacion personal</a></li>
+			<li><a href= "tercerapagina.html" >Formacion</a></li>
+			<li><a href= "cuartapagina.html" >Informacion relevante</a></li>
+			<li><a href= "quintapagina.html" >Contacto</a></li>
+		</ul>
+	</body>
+		
+		<dl>
+		
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			
+				<h1>Titulos de formacion</h1>
+				
+				<img src="3.jpeg" width="300" height="250"/>
+					
+					<h3>Formacion:</h3>
+					
+					
+						
+						<li>Titulo de Graduado en Educacion Secundaria</li>
+						<li>Titulo de grado medio de Electricidad y electronica</li>
+						<li>Curso de iluminacion de 500h</li>
+						<li>Curso de grand MA2 y MA3 lighting</li>
+						<li>Curso de Avolite</li>
+						<p>Mucha experiencia en todas estas formaciones anteriores.
+						</p>
+		</dl>
+	
+	<head/>
+	
+<html/>	
+<!DOCTYPE html>
+<html>
+	
+	<head>
+			
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	
+		<meta charset="UTF-8">
+		<title>Roberto Magro</title>
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	
+	<body>
+		<ul class="menu">
+			<li><a href= "primerapagina.html" >Presentaciòn</a></li>
+			<li><a href= "segundapagina.html" >Informacion personal</a></li>
+			<li><a href= "tercerapagina.html" >Formacion</a></li>
+			<li><a href= "cuartapagina.html" >Informacion relevante</a></li>
+			<li><a href= "quintapagina.html" >Contacto</a></li>
+		</ul>
+	</body>		
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		
+		<h1>Formulario</h1>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			
+			
+		<form action="enviarPHP.php" method="post">
+			
+		<br/>
+				
+			<dd>
+				Nombre y apellidos:
+				<input type="text" size="15" maxlength="30" placeholder="Nombre" name="nombre">
+				
+				<input type="text" size="15" maxlength="30" placeholder="Apellido1" name="apellido1">
+				
+				<input type="text" size="15" maxlength="30" placeholder="Apellido2" name="apellido2">
+				<br><br/>
+				Empresa:
+				<input type="text" size="15" maxlength="30" placeholder="Nombre empresa" name="nombre empresa">
+				<br/><br/>
+				Numero de telefono:
+				<input type="number" size="15" maxlength="30" placeholder="Numero" name="numero">
+				<br/><br/>
+				Correo electronico:
+				<input type="text" size="15" maxlength="30" placeholder="Correo electronico" name="correoElectronico">
+				
+			<dd/>
+			
+		<br/>
+		
+			<li>Selecciona tu genero:</li>
+			<br/>
+			<input name="cbimujer" type="checkbox"  />Mujer
+			<br/>
+			<input name="cbihombre" type="checkbox" />Hombre		
+			<br><br/>
+			<br><br/>
+
+			<dd>
+				<select name="entradalista">
+					<optgroup label="Ciudades">
+					<option>Badajoz</option>
+					<option>Caceres</option>
+					<option>Merida</option>
+					<option>Plasencia</option>
+					
+				</select>
+			<dd/>	
+		
+		<br/>
+		
+			<button type="submit" class="btn btn-primary" >Enviar</button>
+		</form>	
+				
+			
+				
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Roberto Magro</title>
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<ul class="menu">
+			<li><a href= "primerapagina.html" >Presentaciòn</a></li>
+			<li><a href= "segundapagina.html" >Informacion personal</a></li>
+			<li><a href= "tercerapagina.html" >Formacion</a></li>
+			<li><a href= "cuartapagina.html" >Informacion relevante</a></li>
+			<li><a href= "quintapagina.html" >Contacto</a></li>
+		</ul>
+	</body>
+</html> 
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	
+		
+		<meta charset="UTF-8">
+		<title>Roberto Magro</title>
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	
+	<body>
+		<ul class="menu">
+			<li><a href= "primerapagina.html" >Presentaciòn</a></li>
+			<li><a href= "segundapagina.html" >Informacion personal</a></li>
+			<li><a href= "tercerapagina.html" >Formacion</a></li>
+			<li><a href= "cuartapagina.html" >Informacion relevante</a></li>
+			<li><a href= "quintapagina.html" >Contacto</a></li>
+		</ul>
+	</body>
+		
+		<dl>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+		
+				<img src="2.jpeg" width="300" height="250"/>
+				
+					<h2>Datos personales</h2>	
+				
+				
+					<li>Nombre: Roberto</li>
+					<li>Apellidos: Magro Martin</li>
+					<li>DNI: 76074...</li>
+					<li>Telefono: 67428...</li>
+					<li>Codigo postal: 06500</li>
+					<li>Direccion: Avenida de Nuestra </li>
+					<li>Piso: n6 2c</li>
+					<li>Pais: España</li>
+		
+		</dl>
+
+	<head/>
+
+<html/>
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+		
+		<meta charset="UTF-8">
+		<title>Roberto Magro</title>
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	
+	<body>
+		<ul class="menu">
+			<li><a href= "primerapagina.html" >Presentaciòn</a></li>
+			<li><a href= "segundapagina.html" >Informacion personal</a></li>
+			<li><a href= "tercerapagina.html" >Formacion</a></li>
+			<li><a href= "cuartapagina.html" >Informacion relevante</a></li>
+			<li><a href= "quintapagina.html" >Contacto</a></li>
+		</ul>
+	</body>	
+
+
+		<dl>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			
+				<h1>Informacion</h1>	
+				
+				<img src="5.jpeg" width="300" height="250"/>
+					
+					<h3>Informacion relevante:</h3>
+					<br/>
+						
+						<li>Manejo de paquete <strong>Ofice</strong></li>
+						<li>Manejo de paquete <strong>Adobe.</strong></li>
+						<li>Diseño 3d: <strong>Cinema 4d.</strong></li>
+						<li>Carnet de conducir: B.</li>
+						<li>Idiomas: Ingles</li>
+					
+		</dl>		
+	
+	
+	<head/>
+	
+<html/>	
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>Roberto Magro</title>
+		<link href="css/estilo.css" rel="stylesheet" type="text/css">
+	<body>
+		<ul class="menu">
+			<li><a href= "primerapagina.html" >Presentaciòn</a></li>
+			<li><a href= "segundapagina.html" >Informacion personal</a></li>
+			<li><a href= "tercerapagina.html" >Formacion</a></li>
+			<li><a href= "cuartapagina.html" >Informacion relevante</a></li>
+			<li><a href= "quintapagina.html" >Contacto</a></li>
+		</ul>
+	</body>	
+	</head>
+
+	<body>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		
+			<h1>Curriculum Vitae</h1>
+			
+			<img src="primera.jpg" width="300" height="250"/>
+			
+		
+			<p>Esta pagina web, es una informacion sobre el Curriculum vitae de <strong>Roberto Magro</strong>.</p>
+			<p>Mi curriculum Vitae es bastante completo, relacionado con el mundo audiovisual,<br/>
+			sobre todo en iluminacion para directos, teatros, danza, etc.</p>
+			
+
+			
+			<h3>Iluminacion</h3>
+			<p>Esta rama de audiovisulaes es la que mas me gusta, ya que es muy <em>creativa</em> y ser <em>creativo</em> es uno de los puntos que te hace fuerte en este sestor</p>
+			
+			
+			
+			<h3>video</h3>
+			<p>Video no he empezado hace mucho con esta rama pero no se me da nada mal, he trabajado en <em>videomappingg</em><br/>
+			creado por mi entero y operado tambien por mi, tambien he trabajado en diferentes eventos como <em>festivales</em><br/>
+			y muchos mas <em>eventos</em>.</p>
+	<body/>
+
+<html/>	
+	
+
